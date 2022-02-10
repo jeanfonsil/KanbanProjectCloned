@@ -19,11 +19,23 @@ namespace KanbanProject
         public int SprintId { get; set; }
         public Sprint Sprint { get; set; }
         public State State { get; set; }
+        public static List<Card> All()
+        {
+            var db = new KanbanContext();
+            return db.Cards.ToList();
+        }
+
+        public void Save()
+        {
+            var db = KanbanContext.GetInstance();
+            db.Cards.Add(this);
+            db.SaveChanges();
+        }
     }
     public enum State
     {
-        A_fazer,
-        Em_andamento,
-        Concluido,
+        Requested,
+        In_Progress,
+        Done,
     }
 }

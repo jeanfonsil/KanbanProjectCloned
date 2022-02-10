@@ -12,6 +12,19 @@ namespace KanbanProject
         public int Id { get; set; }
         public string Name { get; set; }
         public ICollection<Card> Cards { get; set; }
+
+        public static List<User> All()
+        {
+            var db = new KanbanContext();
+            return db.Users.ToList();
+        }
+
+        public void Save()
+        {
+            var db = KanbanContext.GetInstance();
+            db.Users.Add(this);
+            db.SaveChanges();
+        }
     }
 }
 
