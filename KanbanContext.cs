@@ -16,5 +16,14 @@ namespace KanbanProject
         {
             optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=KanbanDb;Trusted_Connection=true;");
         }
+        private static KanbanContext Instance;
+        public static KanbanContext GetInstance()
+        {
+            if (Instance == null)
+            {
+                Instance = new KanbanContext();
+            }
+            return Instance;
+        }
     }
 }
