@@ -24,7 +24,7 @@ namespace KanbanProject
             var db = KanbanContext.GetInstance();
             db.Users.Add(this);
             db.SaveChanges();
-        }
+        }        
     }
 }
 

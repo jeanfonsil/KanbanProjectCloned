@@ -8,7 +8,7 @@ using KanbanProject;
 namespace KanbanProject.Migrations
 {
     [DbContext(typeof(KanbanContext))]
-    [Migration("20220210024124_Initial")]
+    [Migration("20220211022044_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,7 +28,7 @@ namespace KanbanProject.Migrations
 
                     b.Property<int>("SprintId");
 
-                    b.Property<int>("State");
+                    b.Property<int>("Status");
 
                     b.Property<string>("Title");
 

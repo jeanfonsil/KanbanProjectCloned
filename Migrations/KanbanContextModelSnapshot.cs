@@ -27,7 +27,7 @@ namespace KanbanProject.Migrations
 
                     b.Property<int>("SprintId");
 
-                    b.Property<int>("State");
+                    b.Property<int>("Status");
 
                     b.Property<string>("Title");
 

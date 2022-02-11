@@ -18,7 +18,7 @@ namespace KanbanProject
         public double Estimate { get; set; }
         public int SprintId { get; set; }
         public Sprint Sprint { get; set; }
-        public State State { get; set; }
+        public Status Status { get; set; }
         public static List<Card> All()
         {
             var db = new KanbanContext();
@@ -30,12 +30,13 @@ namespace KanbanProject
             var db = KanbanContext.GetInstance();
             db.Cards.Add(this);
             db.SaveChanges();
-        }
+        }        
     }
-    public enum State
+    public enum Status
     {
         Requested,
         In_Progress,
         Done,
     }
+    
 }

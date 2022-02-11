@@ -249,9 +249,9 @@
   <ItemGroup>
     <Compile Include="Card.cs" />
     <Compile Include="KanbanContext.cs" />
-    <Compile Include="Migrations\20220210024124_Initial.cs" />
-    <Compile Include="Migrations\20220210024124_Initial.designer.cs">
-      <DependentUpon>20220210024124_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\20220211022044_Initial.cs" />
+    <Compile Include="Migrations\20220211022044_Initial.designer.cs">
+      <DependentUpon>20220211022044_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\KanbanContextModelSnapshot.cs" />
     <Compile Include="Program.cs" />

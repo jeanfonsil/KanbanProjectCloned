@@ -44,7 +44,7 @@ namespace KanbanProject.Migrations
                     Description = table.Column<string>(nullable: true),
                     Estimate = table.Column<double>(nullable: false),
                     SprintId = table.Column<int>(nullable: false),
-                    State = table.Column<int>(nullable: false),
+                    Status = table.Column<int>(nullable: false),
                     Title = table.Column<string>(nullable: true),
                     UserId = table.Column<int>(nullable: false)
                 },
